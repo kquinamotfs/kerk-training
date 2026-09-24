@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  scaffold:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sandbox boots (smoke check)
+        working-directory: sandbox
+        run: |
+          node server.js &
+          sleep 1
+          curl -sf http://localhost:3000/api/health
+          echo "CI scaffold OK — replace this step with real test runs (Day 8)."
