@@ -1,0 +1,13 @@
+{
+  "name": "kerk-training-sandbox-account-api",
+  "version": "1.0.0",
+  "description": "Sandbox Account API + Loyalty Points Redemption service for Kerk Gerald Quinamot's training-plan-1 (Tracks 1-3). Zero dependencies — plain Node http. Not for production use.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
