@@ -4,3 +4,8 @@ node_modules/
 .env
 .vscode/
 .idea/
+
+# Playwright local output
+test-results/
+playwright-report/
+blob-report/
